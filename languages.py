@@ -3,20 +3,20 @@
 LANGUAGES = {
     "en": {
         "welcome": """
-☀️ **Welcome to SolarKH Bot!**
+☀️ Welcome to SolarKH Bot!
 
 I can help you get quotes for solar panel installations.
 
-**Commands:**
-• `/quote <monthly_kwh> <price_per_kwh>` - Get a custom quote
-  Example: `/quote 300 0.15`
+Commands:
+• /quote <monthly_kwh> <price_per_kwh> - Get a custom quote
+  Example: /quote 300 0.15
 
-• `/template <type> <price_per_kwh>` - Get quote from template
+• /template <type> <price_per_kwh> - Get quote from template
   Types: small, medium, big, factory
-  Example: `/template medium 0.15`
+  Example: /template medium 0.15
 
-• `/language` - Switch language / ប្តូរភាសា
-• `/help` - Show this help message
+• /language - Switch language / ប្តូរភាសា
+• /help - Show this help message
 
 📢 Follow our channel: @solar_kh
 
@@ -98,27 +98,27 @@ Example: `/template medium 0.15`
     },
     "kh": {
         "welcome": """
-☀️ *សូមស្វាគមន៍មកកាន់ SolarKH Bot\\!*
+ សូមស្វាគមន៍មកកាន់ SolarKH Bot!
 
 ខ្ញុំអាចជួយអ្នកទទួលបានសម្រង់តម្លៃសម្រាប់ការដំឡើងបន្ទះពន្លឺព្រះអាទិត្យ។
 
-*ពាក្យបញ្ជា:*
-• /quote \\- ទទួលបានសម្រង់តម្លៃផ្ទាល់ខ្លួន
-  ឧទាហរណ៍: /quote 300 0\\.15
+ពាក្យបញ្ជា:
+• /quote - ទទួលបានសម្រង់តម្លៃផ្ទាល់ខ្លួន
+  ឧទាហរណ៍: /quote 300 0.15
 
-• /template \\- ទទួលបានសម្រង់តម្លៃពីគំរូ
+• /template - ទទួលបានសម្រង់តម្លៃពីគំរូ
   ប្រភេទ: តូច, មធ្យម, ធំ, រោងចក្រ
-  ឧទាហរណ៍: /template មធ្យម 0\\.15
+  ឧទាហរណ៍: /template មធ្យម 0.15
 
-• /language \\- ប្តូរភាសា
-• /help \\- បង្ហាញសារជំនួយនេះ
+• /language - ប្តូរភាសា
+• /help - បង្ហាញសារជំនួយនេះ
 
-📢 តាមដានឆានែលរបស់យើង: @solar\\_kh
+ តាមដានឆានែលរបស់យើង: @solar_kh
 
-សូមបំពេញអនាគតរបស់អ្នកដោយថាមពលព្រះអាទិត្យ\\! 🌞
+សូមបំពេញអនាគតរបស់អ្នកដោយថាមពលព្រះអាទិត្យ! 
 """,
         "help": """
-🔆 **របៀបប្រើ SolarKH Bot:**
+ **របៀបប្រើ SolarKH Bot:**
 
 **ទទួលបានសម្រង់តម្លៃផ្ទាល់ខ្លួន:**
 `/quote <kwh_ប្រចាំខែ> <តម្លៃ_ក្នុងមួយ_kwh>`

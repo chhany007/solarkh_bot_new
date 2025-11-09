@@ -18,7 +18,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send welcome message when /start is issued"""
     user_id = update.effective_user.id
     welcome_message = get_text(user_id, 'welcome')
-    await update.message.reply_text(welcome_message, parse_mode='MarkdownV2')
+    await update.message.reply_text(welcome_message)
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send help message"""
