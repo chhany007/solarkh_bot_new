@@ -1,6 +1,10 @@
 # config.py
 BOT_TOKEN = "8314060395:AAHzQECuCSAiyfvMp0SaFzdT6Yfy1yGa8Bs"
 
+# Channel info
+CHANNEL = "@solar_kh"
+
+# System parameters
 SUN_HOURS = 5.0
 SYSTEM_EFFICIENCY = 0.80
 LABOR_DAILY = 100.0

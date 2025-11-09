@@ -9,6 +9,7 @@ A Telegram bot for calculating solar panel installation quotes in Cambodia.
 - 💰 Detailed cost breakdown (panels, inverters, labor, materials)
 - 📈 ROI calculation with payback period
 - 🌐 Multi-tier pricing (low-cost/high-cost components)
+- 🇰🇭 **Bilingual support: English & Khmer (ភាសាខ្មែរ)**
 
 ## Setup Instructions
 
@@ -71,6 +72,9 @@ Welcome message with bot overview
 #### `/help`
 Display help information and usage examples
 
+#### `/language`
+Switch between English and Khmer (ប្តូររវាងភាសាអង់គ្លេស និងខ្មែរ)
+
 #### `/quote <monthly_kwh> <price_per_kwh>`
 Get a custom solar installation quote
 
@@ -84,15 +88,22 @@ Get a custom solar installation quote
 #### `/template <type> <price_per_kwh>`
 Get a quote using pre-configured templates
 
-**Template types:**
+**Template types (English):**
 - `small` - Small home (300 kWh/month)
 - `medium` - Medium home (600 kWh/month)
 - `big` - Big home (1200 kWh/month)
 - `factory` - Factory (5000 kWh/month)
 
+**Template types (Khmer/ខ្មែរ):**
+- `តូច` - ផ្ទះតូច (300 kWh/ខែ)
+- `មធ្យម` - ផ្ទះមធ្យម (600 kWh/ខែ)
+- `ធំ` - ផ្ទះធំ (1200 kWh/ខែ)
+- `រោងចក្រ` - រោងចក្រ (5000 kWh/ខែ)
+
 **Example:**
 ```
 /template medium 0.15
+/template មធ្យម 0.15
 ```
 
 ## Configuration
