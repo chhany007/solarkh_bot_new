@@ -1,0 +1,39 @@
+{
+  "panels": {
+    "low_cost": [
+      {"name": "LV 340W", "watt": 340, "price": 44},
+      {"name": "LV 550W", "watt": 550, "price": 66},
+      {"name": "LV 620W", "watt": 620, "price": 82}
+    ],
+    "high_cost": [
+      {"name": "LongGi 360W", "watt": 360, "price": 49},
+      {"name": "LongGi 585W", "watt": 585, "price": 99}
+    ]
+  },
+  "inverters": {
+    "low_cost_preferred": [
+      {"name": "LUX 6kW", "kw": 6, "price": 516},
+      {"name": "LV 5kW", "kw": 5, "price": 488}
+    ],
+    "high_cost_preferred": [
+      {"name": "DeYe EU1p 5kW", "kw": 5, "price": 888},
+      {"name": "DeYe 8kW", "kw": 8, "price": 1320},
+      {"name": "DeYe 10kW", "kw": 10, "price": 1800},
+      {"name": "LV 10kW", "kw": 10, "price": 1116}
+    ]
+  },
+  "batteries": [
+    {"name": "DeYe 5.12kWh", "kwh": 5.12, "price": 1380},
+    {"name": "LV 5.12kWh", "kwh": 5.12, "price": 678},
+    {"name": "LV 10.24kWh", "kwh": 10.24, "price": 1208},
+    {"name": "LV 15.36kWh", "kwh": 15.36, "price": 1440}
+  ],
+  "labor": {"flat_under_5kw": 350, "daily_rate": 100},
+  "materials": {"flat_under_5kw": 400},
+  "templates": {
+    "small_home_kwh": 300,
+    "medium_home_kwh": 600,
+    "big_home_kwh": 1200,
+    "factory_kwh": 5000
+  }
+}
