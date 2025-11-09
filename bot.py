@@ -40,7 +40,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send help message"""
     user_id = update.effective_user.id
     help_text = get_text(user_id, 'help')
-    await update.message.reply_text(help_text, parse_mode='Markdown')
+    await update.message.reply_text(help_text)
 
 async def language_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handle /language command"""
@@ -56,8 +56,7 @@ async def language_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     await update.message.reply_text(
         get_text(user_id, 'language_select'),
-        reply_markup=reply_markup,
-        parse_mode='Markdown'
+        reply_markup=reply_markup
     )
 
 async def language_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -71,8 +70,7 @@ async def language_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     set_language(user_id, lang)
     
     await query.edit_message_text(
-        text=get_text(user_id, 'language_changed'),
-        parse_mode='Markdown'
+        text=get_text(user_id, 'language_changed')
     )
 
 async def quote(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -99,14 +97,13 @@ async def quote(update: Update, context: ContextTypes.DEFAULT_TYPE):
         q = calculate_quote(monthly_kwh, price_per_kwh)
         
         # Send formatted quote
-        await update.message.reply_text(format_quote(q, user_id), parse_mode='Markdown')
+        await update.message.reply_text(format_quote(q, user_id))
         
         logger.info(f"Quote generated for user {user_id}: {monthly_kwh} kWh")
         
     except ValueError:
         await update.message.reply_text(
-            get_text(user_id, 'error_invalid'),
-            parse_mode='Markdown'
+            get_text(user_id, 'error_invalid')
         )
     except Exception as e:
         logger.error(f"Error in quote command: {e}")
@@ -269,7 +266,7 @@ async def text_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 # Calculate quote
                 await update.message.reply_text(get_text(user_id, 'calculating'))
                 q = calculate_quote(monthly_kwh, price_per_kwh)
-                await update.message.reply_text(format_quote(q, user_id), parse_mode='Markdown')
+                await update.message.reply_text(format_quote(q, user_id))
                 
                 context.user_data['waiting_for_quote'] = False
                 logger.info(f"Quote generated for user {user_id}: {monthly_kwh} kWh")
@@ -300,7 +297,7 @@ async def text_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             # Calculate quote
             await update.message.reply_text(get_text(user_id, 'calculating'))
             q = calculate_quote(monthly_kwh, price_per_kwh)
-            await update.message.reply_text(format_quote(q, user_id), parse_mode='Markdown')
+            await update.message.reply_text(format_quote(q, user_id))
             
             context.user_data['waiting_for_price'] = None
             logger.info(f"Template quote '{template_type}' for user {user_id}")
