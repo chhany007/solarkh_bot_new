@@ -37,7 +37,17 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     welcome_message = get_text(user_id, 'welcome')
     keyboard = get_main_keyboard(user_id)
-    await update.message.reply_text(welcome_message, reply_markup=keyboard)
+    
+    # Send logo with welcome message
+    try:
+        await update.message.reply_photo(
+            photo=config.LOGO_URL,
+            caption=welcome_message,
+            reply_markup=keyboard
+        )
+    except:
+        # Fallback to text if logo fails to load
+        await update.message.reply_text(welcome_message, reply_markup=keyboard)
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send help message"""
@@ -77,10 +87,18 @@ async def language_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         text=get_text(user_id, 'language_changed')
     )
     
-    # Send new message with updated keyboard
+    # Send new message with updated keyboard and logo
     keyboard = get_main_keyboard(user_id)
     welcome_msg = get_text(user_id, 'welcome')
-    await query.message.reply_text(welcome_msg, reply_markup=keyboard)
+    
+    try:
+        await query.message.reply_photo(
+            photo=config.LOGO_URL,
+            caption=welcome_msg,
+            reply_markup=keyboard
+        )
+    except:
+        await query.message.reply_text(welcome_msg, reply_markup=keyboard)
 
 async def quote(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handle /quote command"""
@@ -329,7 +347,16 @@ async def products_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ]
     
     reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text(get_text(user_id, 'products_menu'), reply_markup=reply_markup)
+    
+    # Send with logo
+    try:
+        await update.message.reply_photo(
+            photo=config.LOGO_URL,
+            caption=get_text(user_id, 'products_menu'),
+            reply_markup=reply_markup
+        )
+    except:
+        await update.message.reply_text(get_text(user_id, 'products_menu'), reply_markup=reply_markup)
 
 async def learn_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handle /learn command - show educational content"""
@@ -359,7 +386,16 @@ async def learn_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ]
     
     reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text(get_text(user_id, 'learn_menu'), reply_markup=reply_markup)
+    
+    # Send with logo
+    try:
+        await update.message.reply_photo(
+            photo=config.LOGO_URL,
+            caption=get_text(user_id, 'learn_menu'),
+            reply_markup=reply_markup
+        )
+    except:
+        await update.message.reply_text(get_text(user_id, 'learn_menu'), reply_markup=reply_markup)
 
 async def products_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handle product selection callbacks"""
