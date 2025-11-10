@@ -1,9 +1,12 @@
 # bot.py
 import logging
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
+import json
+import os
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton, InputMediaPhoto
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
 from utils.calculator import calculate_quote, DB
 from utils.formatter import format_quote, format_templates
+from utils.product_viewer import format_product_specs, get_all_panels, get_all_inverters, get_all_batteries
 from languages import get_text, set_language, get_language
 import config
 
@@ -307,6 +310,142 @@ async def text_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         except ValueError:
             await update.message.reply_text(get_text(user_id, 'error_invalid'))
 
+async def products_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /products command - show product catalog"""
+    user_id = update.effective_user.id
+    lang = get_language(user_id)
+    
+    if lang == 'kh':
+        keyboard = [
+            [InlineKeyboardButton("🔆 បន្ទះសូឡា", callback_data="prod_panels")],
+            [InlineKeyboardButton("🔌 Inverters", callback_data="prod_inverters")],
+            [InlineKeyboardButton("🔋 ថ្ម", callback_data="prod_batteries")]
+        ]
+    else:
+        keyboard = [
+            [InlineKeyboardButton("🔆 Solar Panels", callback_data="prod_panels")],
+            [InlineKeyboardButton("🔌 Inverters", callback_data="prod_inverters")],
+            [InlineKeyboardButton("🔋 Batteries", callback_data="prod_batteries")]
+        ]
+    
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    await update.message.reply_text(get_text(user_id, 'products_menu'), reply_markup=reply_markup)
+
+async def learn_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle /learn command - show educational content"""
+    user_id = update.effective_user.id
+    lang = get_language(user_id)
+    
+    # Load education data
+    edu_path = os.path.join(os.path.dirname(__file__), "data", "solar_education.json")
+    with open(edu_path, "r", encoding="utf-8") as f:
+        edu_data = json.load(f)
+    
+    if lang == 'kh':
+        keyboard = [
+            [InlineKeyboardButton("☀️ មូលដ្ឋានគ្រឹះ", callback_data="learn_basics")],
+            [InlineKeyboardButton("🏠 ប្រភេទប្រព័ន្ធ", callback_data="learn_system_types")],
+            [InlineKeyboardButton("📏 ទំហំប្រព័ន្ធ", callback_data="learn_sizing")],
+            [InlineKeyboardButton("🔧 ការថែទាំ", callback_data="learn_maintenance")],
+            [InlineKeyboardButton("💰 ROI", callback_data="learn_roi")]
+        ]
+    else:
+        keyboard = [
+            [InlineKeyboardButton("☀️ Solar Basics", callback_data="learn_basics")],
+            [InlineKeyboardButton("🏠 System Types", callback_data="learn_system_types")],
+            [InlineKeyboardButton("📏 System Sizing", callback_data="learn_sizing")],
+            [InlineKeyboardButton("🔧 Maintenance", callback_data="learn_maintenance")],
+            [InlineKeyboardButton("💰 ROI & Savings", callback_data="learn_roi")]
+        ]
+    
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    await update.message.reply_text(get_text(user_id, 'learn_menu'), reply_markup=reply_markup)
+
+async def products_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle product selection callbacks"""
+    query = update.callback_query
+    await query.answer()
+    
+    user_id = query.from_user.id
+    lang = get_language(user_id)
+    action = query.data.replace("prod_", "")
+    
+    if action == "panels":
+        panels = get_all_panels(user_id)
+        keyboard = []
+        for panel in panels:
+            keyboard.append([InlineKeyboardButton(
+                f"{panel['name']} - ${panel['price']}", 
+                callback_data=f"view_panel_{panels.index(panel)}"
+            )])
+        keyboard.append([InlineKeyboardButton(get_text(user_id, 'back_to_menu'), callback_data="back_products")])
+        
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        await query.edit_message_text("🔆 **Solar Panels:**" if lang == 'en' else "🔆 **បន្ទះសូឡា:**", reply_markup=reply_markup)
+    
+    elif action == "inverters":
+        inverters = get_all_inverters(user_id)
+        keyboard = []
+        for inv in inverters:
+            keyboard.append([InlineKeyboardButton(
+                f"{inv['name']} - ${inv['price']}", 
+                callback_data=f"view_inv_{inverters.index(inv)}"
+            )])
+        keyboard.append([InlineKeyboardButton(get_text(user_id, 'back_to_menu'), callback_data="back_products")])
+        
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        await query.edit_message_text("🔌 **Inverters:**", reply_markup=reply_markup)
+    
+    elif action == "batteries":
+        batteries = get_all_batteries(user_id)
+        keyboard = []
+        for bat in batteries:
+            keyboard.append([InlineKeyboardButton(
+                f"{bat['name']} - ${bat['price']}", 
+                callback_data=f"view_bat_{batteries.index(bat)}"
+            )])
+        keyboard.append([InlineKeyboardButton(get_text(user_id, 'back_to_menu'), callback_data="back_products")])
+        
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        await query.edit_message_text("🔋 **Batteries:**" if lang == 'en' else "🔋 **ថ្ម:**", reply_markup=reply_markup)
+
+async def learn_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle learn topic callbacks"""
+    query = update.callback_query
+    await query.answer()
+    
+    user_id = query.from_user.id
+    lang = get_language(user_id)
+    topic = query.data.replace("learn_", "")
+    
+    # Load education data
+    edu_path = os.path.join(os.path.dirname(__file__), "data", "solar_education.json")
+    with open(edu_path, "r", encoding="utf-8") as f:
+        edu_data = json.load(f)
+    
+    if topic in edu_data['lessons']:
+        lesson = edu_data['lessons'][topic]
+        title = lesson[f'title_{lang}']
+        content = lesson[f'content_{lang}']
+        
+        message = f"{title}\n\n{content}"
+        
+        keyboard = [[InlineKeyboardButton(get_text(user_id, 'back_to_menu'), callback_data="back_learn")]]
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        
+        # Send diagram image if available
+        if 'diagram' in lesson:
+            try:
+                await query.message.reply_photo(
+                    photo=lesson['diagram'],
+                    caption=message[:1024]  # Telegram caption limit
+                )
+                await query.edit_message_reply_markup(reply_markup=reply_markup)
+            except:
+                await query.edit_message_text(message, reply_markup=reply_markup)
+        else:
+            await query.edit_message_text(message, reply_markup=reply_markup)
+
 async def error_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Log errors caused by updates"""
     logger.error(f"Update {update} caused error {context.error}")
@@ -327,10 +466,14 @@ def main():
     app.add_handler(CommandHandler("language", language_command))
     app.add_handler(CommandHandler("quote", quote))
     app.add_handler(CommandHandler("template", template))
+    app.add_handler(CommandHandler("products", products_command))
+    app.add_handler(CommandHandler("learn", learn_command))
     
     # Add callback query handlers
     app.add_handler(CallbackQueryHandler(language_callback, pattern='^lang_'))
     app.add_handler(CallbackQueryHandler(template_callback, pattern='^template_'))
+    app.add_handler(CallbackQueryHandler(products_callback, pattern='^prod_'))
+    app.add_handler(CallbackQueryHandler(learn_callback, pattern='^learn_'))
     
     # Add message handlers for buttons and text input
     app.add_handler(MessageHandler(filters.Regex('^(💰|📋|🌐|❓)'), button_handler))

@@ -1,0 +1,65 @@
+{
+  "lessons": {
+    "basics": {
+      "title_en": "☀️ Solar Energy Basics",
+      "title_kh": "☀️ មូលដ្ឋានគ្រឹះនៃថាមពលពន្លឺព្រះអាទិត្យ",
+      "content_en": "Solar panels convert sunlight into electricity through photovoltaic (PV) cells. When sunlight hits the panels, electrons are knocked loose, creating an electric current.\n\n🔆 Key Components:\n• Solar Panels - Capture sunlight\n• Inverter - Converts DC to AC power\n• Battery (optional) - Stores energy\n• Mounting System - Secures panels\n\n💡 Benefits:\n✅ Reduces electricity bills\n✅ Clean, renewable energy\n✅ Low maintenance\n✅ Increases property value",
+      "content_kh": "បន្ទះសូឡា បំប្លែងពន្លឺព្រះអាទិត្យទៅជាអគ្គិសនីតាមរយៈកោសិកា photovoltaic (PV)។ នៅពេលពន្លឺព្រះអាទិត្យប៉ះបន្ទះ អេឡិចត្រុងត្រូវបានដោះចេញ បង្កើតជាចរន្តអគ្គិសនី។\n\n🔆 សមាសធាតុសំខាន់:\n• បន្ទះសូឡា - ចាប់យកពន្លឺព្រះអាទិត្យ\n• Inverter - បំប្លែង DC ទៅ AC\n• ថ្ម (ជម្រើស) - រក្សាទុកថាមពល\n• ប្រព័ន្ធម៉ោន - ធានាសុវត្ថិភាពបន្ទះ\n\n💡 អត្ថប្រយោជន៍:\n✅ កាត់បន្ថយវិក្កយបត្រអគ្គិសនី\n✅ ថាមពលស្អាត និងកកើតឡើងវិញ\n✅ ថែទាំតិច\n✅ បង្កើនតម្លៃអចលនទ្រព្យ",
+      "diagram": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600"
+    },
+    "system_types": {
+      "title_en": "🏠 Solar System Types",
+      "title_kh": "🏠 ប្រភេទប្រព័ន្ធសូឡា",
+      "content_en": "There are three main types of solar systems:\n\n1️⃣ GRID-TIED (On-Grid)\n• Connected to utility grid\n• No battery needed\n• Lowest cost option\n• Best for: Areas with reliable grid\n\n2️⃣ HYBRID (Grid + Battery)\n• Connected to grid + battery backup\n• Power during outages\n• Stores excess energy\n• Best for: Areas with frequent outages\n\n3️⃣ OFF-GRID (Standalone)\n• Completely independent\n• Requires large battery bank\n• Highest cost\n• Best for: Remote areas without grid",
+      "content_kh": "មានប្រភេទប្រព័ន្ធសូឡាចម្បងបី:\n\n1️⃣ ភ្ជាប់បណ្តាញ (On-Grid)\n• ភ្ជាប់ទៅបណ្តាញអគ្គិសនី\n• មិនត្រូវការថ្ម\n• តម្លៃទាបបំផុត\n• ល្អសម្រាប់: តំបន់មានបណ្តាញជាប់លាប់\n\n2️⃣ ចម្រុះ (Grid + Battery)\n• ភ្ជាប់បណ្តាញ + ថ្មបម្រុងទុក\n• មានអគ្គិសនីពេលដាច់\n• រក្សាទុកថាមពលបន្ថែម\n• ល្អសម្រាប់: តំបន់ដាច់ញឹកញាប់\n\n3️⃣ ដាច់ពីបណ្តាញ (Off-Grid)\n• ឯករាជ្យពេញលេញ\n• ត្រូវការធនាគារថ្មធំ\n• តម្លៃខ្ពស់បំផុត\n• ល្អសម្រាប់: តំបន់ដាច់ស្រយាល",
+      "diagram": "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600"
+    },
+    "sizing": {
+      "title_en": "📏 How to Size Your System",
+      "title_kh": "📏 របៀបកំណត់ទំហំប្រព័ន្ធ",
+      "content_en": "Follow these steps to size your solar system:\n\n1️⃣ Calculate Monthly Usage\n• Check your electricity bill\n• Find kWh consumed per month\n• Example: 300 kWh/month\n\n2️⃣ Determine Daily Average\n• Divide monthly by 30\n• Example: 300 ÷ 30 = 10 kWh/day\n\n3️⃣ Account for Sun Hours\n• Cambodia: ~5 hours/day average\n• System efficiency: ~85%\n• Formula: Daily kWh ÷ (5 × 0.85)\n\n4️⃣ Calculate System Size\n• Example: 10 ÷ 4.25 = 2.35 kW\n• Round up: 3 kW system needed\n\n💡 Tip: Add 20% for future growth!",
+      "content_kh": "ធ្វើតាមជំហានទាំងនេះដើម្បីកំណត់ទំហំប្រព័ន្ធសូឡា:\n\n1️⃣ គណនាការប្រើប្រាស់ប្រចាំខែ\n• ពិនិត្យវិក្កយបត្រអគ្គិសនី\n• រកកិឡូវ៉ាត់ម៉ោងប្រើប្រាស់ក្នុងមួយខែ\n• ឧទាហរណ៍: 300 kWh/ខែ\n\n2️⃣ កំណត់មធ្យមប្រចាំថ្ងៃ\n• ចែកប្រចាំខែនឹង 30\n• ឧទាហរណ៍: 300 ÷ 30 = 10 kWh/ថ្ងៃ\n\n3️⃣ គិតគូរម៉ោងពន្លឺព្រះអាទិត្យ\n• កម្ពុជា: ~5 ម៉ោង/ថ្ងៃ មធ្យម\n• ប្រសិទ្ធភាពប្រព័ន្ធ: ~85%\n• រូបមន្ត: kWh ប្រចាំថ្ងៃ ÷ (5 × 0.85)\n\n4️⃣ គណនាទំហំប្រព័ន្ធ\n• ឧទាហរណ៍: 10 ÷ 4.25 = 2.35 kW\n• បង្គត់ឡើង: ត្រូវការប្រព័ន្ធ 3 kW\n\n💡 ជំនួយ: បន្ថែម 20% សម្រាប់ការរីកចម្រើនអនាគត!",
+      "diagram": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600"
+    },
+    "maintenance": {
+      "title_en": "🔧 Maintenance & Care",
+      "title_kh": "🔧 ការថែទាំ និងការថែរក្សា",
+      "content_en": "Keep your solar system running efficiently:\n\n🧹 CLEANING (Every 3-6 months)\n• Remove dust, leaves, bird droppings\n• Use soft brush or water\n• Clean early morning or evening\n• Never use abrasive materials\n\n🔍 INSPECTION (Every 6 months)\n• Check for cracks or damage\n• Inspect wiring connections\n• Monitor inverter display\n• Check mounting bolts\n\n📊 MONITORING (Daily)\n• Track energy production\n• Compare with expected output\n• Note any sudden drops\n• Use monitoring app if available\n\n⚠️ PROFESSIONAL SERVICE (Yearly)\n• Full system inspection\n• Electrical testing\n• Performance optimization\n• Warranty maintenance",
+      "content_kh": "រក្សាប្រព័ន្ធសូឡារបស់អ្នកឱ្យដំណើរការប្រកបដោយប្រសិទ្ធភាព:\n\n🧹 ការសម្អាត (រៀងរាល់ 3-6 ខែ)\n• លុបធូលី ស្លឹកឈើ លាមកបក្សី\n• ប្រើច្រាសទន់ ឬទឹក\n• សម្អាតពេលព្រឹក ឬល្ងាច\n• កុំប្រើវត្ថុរដុបរដុល\n\n🔍 ការត្រួតពិនិត្យ (រៀងរាល់ 6 ខែ)\n• ពិនិត្យរកស្នាមប្រេះ ឬការខូចខាត\n• ពិនិត្យការតភ្ជាប់ខ្សែភ្លើង\n• តាមដានការបង្ហាញ inverter\n• ពិនិត្យប៊ូឡុងម៉ោន\n\n📊 ការតាមដាន (ប្រចាំថ្ងៃ)\n• តាមដានការផលិតថាមពល\n• ប្រៀបធៀបជាមួយលទ្ធផលរំពឹងទុក\n• កត់សម្គាល់ការធ្លាក់ចុះភ្លាមៗ\n• ប្រើកម្មវិធីតាមដាន ប្រសិនបើមាន\n\n⚠️ សេវាកម្មវិជ្ជាជីវៈ (ប្រចាំឆ្នាំ)\n• ការត្រួតពិនិត្យប្រព័ន្ធពេញលេញ\n• ការធ្វើតេស្តអគ្គិសនី\n• ការបង្កើនប្រសិទ្ធភាព\n• ការថែទាំធានារ៉ាប់រង",
+      "diagram": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600"
+    },
+    "roi": {
+      "title_en": "💰 Return on Investment",
+      "title_kh": "💰 ការត្រឡប់មកវិញនៃការវិនិយោគ",
+      "content_en": "Understanding your solar investment:\n\n📊 PAYBACK PERIOD\n• Typical: 3-7 years in Cambodia\n• Depends on:\n  - System size\n  - Electricity price\n  - Sun exposure\n  - Government incentives\n\n💵 SAVINGS CALCULATION\nExample (5kW system):\n• System cost: $3,500\n• Monthly savings: $120\n• Annual savings: $1,440\n• Payback: 2.4 years\n• 25-year savings: $36,000\n\n📈 FACTORS AFFECTING ROI\n✅ Higher electricity rates = Faster payback\n✅ More sun hours = Better returns\n✅ Quality components = Longer life\n✅ Proper maintenance = Maximum output\n\n🎯 LONG-TERM BENEFITS\n• 25+ years of free electricity\n• Protection from rate increases\n• Increased home value\n• Environmental impact",
+      "content_kh": "ការយល់ដឹងអំពីការវិនិយោគសូឡារបស់អ្នក:\n\n📊 រយៈពេលសងត្រឡប់\n• ធម្មតា: 3-7 ឆ្នាំនៅកម្ពុជា\n• អាស្រ័យលើ:\n  - ទំហំប្រព័ន្ធ\n  - តម្លៃអគ្គិសនី\n  - ការប៉ះពាល់ពន្លឺព្រះអាទិត្យ\n  - ការលើកទឹកចិត្តរដ្ឋាភិបាល\n\n💵 ការគណនាការសន្សំ\nឧទាហរណ៍ (ប្រព័ន្ធ 5kW):\n• តម្លៃប្រព័ន្ធ: $3,500\n• ការសន្សំប្រចាំខែ: $120\n• ការសន្សំប្រចាំឆ្នាំ: $1,440\n• សងត្រឡប់: 2.4 ឆ្នាំ\n• ការសន្សំ 25 ឆ្នាំ: $36,000\n\n📈 កត្តាប៉ះពាល់ដល់ ROI\n✅ អត្រាអគ្គិសនីខ្ពស់ = សងត្រឡប់លឿន\n✅ ម៉ោងពន្លឺព្រះអាទិត្យច្រើន = ប្រាក់ចំណេញល្អ\n✅ សមាសធាតុគុណភាព = អាយុកាលវែង\n✅ ការថែទាំត្រឹមត្រូវ = លទ្ធផលអតិបរមា\n\n🎯 អត្ថប្រយោជន៍រយៈពេលវែង\n• អគ្គិសនីឥតគិតថ្លៃ 25+ ឆ្នាំ\n• ការពារពីការកើនឡើងអត្រា\n• បង្កើនតម្លៃផ្ទះ\n• ផលប៉ះពាល់បរិស្ថាន",
+      "diagram": "https://images.unsplash.com/photo-1554224311-beee4ece3c5d?w=600"
+    }
+  },
+  "system_recommendations": {
+    "small_home": {
+      "title_en": "🏠 Small Home System (300 kWh/month)",
+      "title_kh": "🏠 ប្រព័ន្ធផ្ទះតូច (300 kWh/ខែ)",
+      "description_en": "Perfect for:\n• 1-2 bedroom homes\n• Small apartments\n• Basic appliances\n• LED lighting\n• 1-2 air conditioners\n\nRecommended: 2-3 kW system\nPanels needed: 5-7 panels\nRoof space: ~15-20 m²",
+      "description_kh": "ល្អឥតខ្ចោះសម្រាប់:\n• ផ្ទះ 1-2 បន្ទប់គេង\n• អាផាតមិនតូច\n• ឧបករណ៍ជាមូលដ្ឋាន\n• ភ្លើង LED\n• ម៉ាស៊ីនត្រជាក់ 1-2\n\nណែនាំ: ប្រព័ន្ធ 2-3 kW\nបន្ទះត្រូវការ: 5-7 បន្ទះ\nទំហំដំបូល: ~15-20 m²"
+    },
+    "medium_home": {
+      "title_en": "🏡 Medium Home System (600 kWh/month)",
+      "title_kh": "🏡 ប្រព័ន្ធផ្ទះមធ្យម (600 kWh/ខែ)",
+      "description_en": "Perfect for:\n• 3-4 bedroom homes\n• Standard family house\n• Multiple appliances\n• 2-3 air conditioners\n• Water heater\n\nRecommended: 5-6 kW system\nPanels needed: 10-12 panels\nRoof space: ~30-35 m²",
+      "description_kh": "ល្អឥតខ្ចោះសម្រាប់:\n• ផ្ទះ 3-4 បន្ទប់គេង\n• ផ្ទះគ្រួសារស្តង់ដារ\n• ឧបករណ៍ច្រើន\n• ម៉ាស៊ីនត្រជាក់ 2-3\n• ឧបករណ៍ទឹកក្តៅ\n\nណែនាំ: ប្រព័ន្ធ 5-6 kW\nបន្ទះត្រូវការ: 10-12 បន្ទះ\nទំហំដំបូល: ~30-35 m²"
+    },
+    "large_home": {
+      "title_en": "🏢 Large Home System (1200 kWh/month)",
+      "title_kh": "🏢 ប្រព័ន្ធផ្ទះធំ (1200 kWh/ខែ)",
+      "description_en": "Perfect for:\n• 5+ bedroom homes\n• Large villas\n• Many appliances\n• 4+ air conditioners\n• Pool equipment\n\nRecommended: 10-12 kW system\nPanels needed: 18-22 panels\nRoof space: ~55-65 m²",
+      "description_kh": "ល្អឥតខ្ចោះសម្រាប់:\n• ផ្ទះ 5+ បន្ទប់គេង\n• វីឡាធំ\n• ឧបករណ៍ច្រើន\n• ម៉ាស៊ីនត្រជាក់ 4+\n• ឧបករណ៍អាងហែលទឹក\n\nណែនាំ: ប្រព័ន្ធ 10-12 kW\nបន្ទះត្រូវការ: 18-22 បន្ទះ\nទំហំដំបូល: ~55-65 m²"
+    },
+    "commercial": {
+      "title_en": "🏭 Commercial/Factory System (5000+ kWh/month)",
+      "title_kh": "🏭 ប្រព័ន្ធពាណិជ្ជកម្ម/រោងចក្រ (5000+ kWh/ខែ)",
+      "description_en": "Perfect for:\n• Factories\n• Warehouses\n• Large offices\n• Retail stores\n• Heavy machinery\n\nRecommended: 40-50 kW system\nPanels needed: 70-90 panels\nRoof space: ~200-250 m²\n\n💡 Consider three-phase inverter",
+      "description_kh": "ល្អឥតខ្ចោះសម្រាប់:\n• រោងចក្រ\n• ឃ្លាំង\n• ការិយាល័យធំ\n• ហាងលក់រាយ\n• គ្រឿងម៉ាស៊ីនធុនធ្ងន់\n\nណែនាំ: ប្រព័ន្ធ 40-50 kW\nបន្ទះត្រូវការ: 70-90 បន្ទះ\nទំហំដំបូល: ~200-250 m²\n\n💡 ពិចារណា inverter បីដំណាក់កាល"
+    }
+  }
+}

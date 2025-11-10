@@ -23,33 +23,27 @@ Commands:
 Let's power your future with solar! 🌞
 """,
         "help": """
-🔆 **How to use SolarKH Bot:**
+📖 **How to Use SolarKH Bot**
 
-**Get a Custom Quote:**
-`/quote <monthly_kwh> <price_per_kwh>`
+🔹 Get a Quote:
+/quote <monthly_kwh> <price_per_kwh>
+Example: /quote 300 0.15
 
-Example: `/quote 450 0.20`
-- monthly_kwh: Your average monthly electricity consumption
-- price_per_kwh: Your current electricity rate
+🔹 Use Templates:
+/template - Quick quotes for common sizes
 
-**Use Quick Templates:**
-`/template <type> <price_per_kwh>`
+🔹 View Products:
+/products - Browse solar panels, inverters & batteries
 
-Available templates:
-• `small` - Small home (300 kWh/month)
-• `medium` - Medium home (600 kWh/month)
-• `big` - Big home (1200 kWh/month)
-• `factory` - Factory (5000 kWh/month)
+🔹 Learn About Solar:
+/learn - Educational guides & system recommendations
 
-Example: `/template big 0.18`
+🔹 Change Language:
+/language - Switch between English/Khmer
 
-**Switch Language:**
-• `/language` - Change between English/Khmer
+💡 Tip: Check your electricity bill for monthly kWh usage
 
-**Stay Updated:**
 📢 Follow our channel: @solar_kh
-
-Need assistance? Contact us! 📞
 """,
         "language_select": "🌐 **Select Language / ជ្រើសរើសភាសា**\n\nChoose your preferred language:",
         "language_changed": "✅ Language changed to English",
@@ -94,7 +88,12 @@ Example: `/template medium 0.15`
         "small": "small",
         "medium": "medium",
         "big": "big",
-        "factory": "factory"
+        "factory": "factory",
+        "products_menu": "🛒 **Product Catalog**\n\nWhat would you like to view?",
+        "learn_menu": "📚 **Solar Education Center**\n\nChoose a topic to learn more:",
+        "product_details": "📦 **Product Details**",
+        "specs": "📋 **Specifications:**",
+        "back_to_menu": "⬅️ Back to Menu"
     },
     "kh": {
         "welcome": """
@@ -118,6 +117,29 @@ Example: `/template medium 0.15`
 សូមបំពេញអនាគតរបស់អ្នកដោយថាមពលព្រះអាទិត្យ! 
 """,
         "help": """
+📖 **របៀបប្រើ SolarKH Bot**
+
+🔹 ទទួលសម្រង់តម្លៃ:
+/quote <kwh_ប្រចាំខែ> <តម្លៃ_kwh>
+ឧទាហរណ៍: /quote 300 0.15
+
+🔹 ប្រើគំរូ:
+/template - សម្រង់រហ័សសម្រាប់ទំហំទូទៅ
+
+🔹 មើលផលិតផល:
+/products - រកមើលបន្ទះសូឡា inverter និងថ្ម
+
+🔹 រៀនអំពីសូឡា:
+/learn - មគ្គុទ្ទេសក និងការណែនាំប្រព័ន្ធ
+
+🔹 ប្តូរភាសា:
+/language - ប្តូរភាសា អង់គ្លេស/ខ្មែរ
+
+💡 ជំនួយ: ពិនិត្យវិក្កយបត្រអគ្គិសនីសម្រាប់ការប្រើប្រាស់ kWh ប្រចាំខែ
+
+📢 តាមដានឆានែល: @solar_kh
+""",
+        "old_help": """
  **របៀបប្រើ SolarKH Bot:**
 
 **ទទួលបានសម្រង់តម្លៃផ្ទាល់ខ្លួន:**
@@ -189,7 +211,12 @@ Example: `/template medium 0.15`
         "small": "តូច",
         "medium": "មធ្យម",
         "big": "ធំ",
-        "factory": "រោងចក្រ"
+        "factory": "រោងចក្រ",
+        "products_menu": "🛒 **កាតាឡុកផលិតផល**\n\nអ្នកចង់មើលអ្វី?",
+        "learn_menu": "📚 **មជ្ឈមណ្ឌលអប់រំសូឡា**\n\nជ្រើសរើសប្រធានបទដើម្បីរៀនបន្ថែម:",
+        "product_details": "📦 **ព័ត៌មានលម្អិតផលិតផល**",
+        "specs": "📋 **លក្ខណៈបច្ចេកទេស:**",
+        "back_to_menu": "⬅️ ត្រឡប់ទៅម៉ឺនុយ"
     }
 }
 

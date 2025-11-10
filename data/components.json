@@ -1,32 +1,212 @@
 {
   "panels": {
     "low_cost": [
-      {"name": "LV 340W", "watt": 340, "price": 44},
-      {"name": "LV 550W", "watt": 550, "price": 66},
-      {"name": "LV 620W", "watt": 620, "price": 82}
+      {
+        "name": "LV 340W", 
+        "watt": 340, 
+        "price": 44,
+        "specs": {
+          "efficiency": "17.5%",
+          "voltage": "24V",
+          "dimensions": "1640x992x35mm",
+          "warranty": "10 years",
+          "type": "Monocrystalline"
+        },
+        "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400"
+      },
+      {
+        "name": "LV 550W", 
+        "watt": 550, 
+        "price": 66,
+        "specs": {
+          "efficiency": "21.2%",
+          "voltage": "48V",
+          "dimensions": "2278x1134x35mm",
+          "warranty": "12 years",
+          "type": "Monocrystalline PERC"
+        },
+        "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400"
+      },
+      {
+        "name": "LV 620W", 
+        "watt": 620, 
+        "price": 82,
+        "specs": {
+          "efficiency": "22.8%",
+          "voltage": "48V",
+          "dimensions": "2384x1303x35mm",
+          "warranty": "15 years",
+          "type": "Bifacial Monocrystalline"
+        },
+        "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400"
+      }
     ],
     "high_cost": [
-      {"name": "LongGi 360W", "watt": 360, "price": 49},
-      {"name": "LongGi 585W", "watt": 585, "price": 99}
+      {
+        "name": "LongGi 360W", 
+        "watt": 360, 
+        "price": 49,
+        "specs": {
+          "efficiency": "19.8%",
+          "voltage": "24V",
+          "dimensions": "1755x1038x35mm",
+          "warranty": "12 years",
+          "type": "Monocrystalline PERC"
+        },
+        "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400"
+      },
+      {
+        "name": "LongGi 585W", 
+        "watt": 585, 
+        "price": 99,
+        "specs": {
+          "efficiency": "22.3%",
+          "voltage": "48V",
+          "dimensions": "2278x1134x35mm",
+          "warranty": "25 years",
+          "type": "Hi-MO 5 Bifacial"
+        },
+        "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400"
+      }
     ]
   },
   "inverters": {
     "low_cost_preferred": [
-      {"name": "LUX 6kW", "kw": 6, "price": 516},
-      {"name": "LV 5kW", "kw": 5, "price": 488}
+      {
+        "name": "LUX 6kW", 
+        "kw": 6, 
+        "price": 516,
+        "specs": {
+          "type": "Hybrid Inverter",
+          "phases": "Single Phase",
+          "efficiency": "97.6%",
+          "battery_compatible": true,
+          "warranty": "5 years"
+        },
+        "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
+      },
+      {
+        "name": "LV 5kW", 
+        "kw": 5, 
+        "price": 488,
+        "specs": {
+          "type": "Hybrid Inverter",
+          "phases": "Single Phase",
+          "efficiency": "97.3%",
+          "battery_compatible": true,
+          "warranty": "5 years"
+        },
+        "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
+      }
     ],
     "high_cost_preferred": [
-      {"name": "DeYe EU1p 5kW", "kw": 5, "price": 888},
-      {"name": "DeYe 8kW", "kw": 8, "price": 1320},
-      {"name": "DeYe 10kW", "kw": 10, "price": 1800},
-      {"name": "LV 10kW", "kw": 10, "price": 1116}
+      {
+        "name": "DeYe EU1p 5kW", 
+        "kw": 5, 
+        "price": 888,
+        "specs": {
+          "type": "Hybrid Inverter",
+          "phases": "Single Phase",
+          "efficiency": "97.8%",
+          "battery_compatible": true,
+          "warranty": "10 years"
+        },
+        "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
+      },
+      {
+        "name": "DeYe 8kW", 
+        "kw": 8, 
+        "price": 1320,
+        "specs": {
+          "type": "Hybrid Inverter",
+          "phases": "Single/Three Phase",
+          "efficiency": "98.1%",
+          "battery_compatible": true,
+          "warranty": "10 years"
+        },
+        "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
+      },
+      {
+        "name": "DeYe 10kW", 
+        "kw": 10, 
+        "price": 1800,
+        "specs": {
+          "type": "Hybrid Inverter",
+          "phases": "Three Phase",
+          "efficiency": "98.3%",
+          "battery_compatible": true,
+          "warranty": "10 years"
+        },
+        "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
+      },
+      {
+        "name": "LV 10kW", 
+        "kw": 10, 
+        "price": 1116,
+        "specs": {
+          "type": "Hybrid Inverter",
+          "phases": "Three Phase",
+          "efficiency": "97.9%",
+          "battery_compatible": true,
+          "warranty": "5 years"
+        },
+        "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
+      }
     ]
   },
   "batteries": [
-    {"name": "DeYe 5.12kWh", "kwh": 5.12, "price": 1380},
-    {"name": "LV 5.12kWh", "kwh": 5.12, "price": 678},
-    {"name": "LV 10.24kWh", "kwh": 10.24, "price": 1208},
-    {"name": "LV 15.36kWh", "kwh": 15.36, "price": 1440}
+    {
+      "name": "DeYe 5.12kWh", 
+      "kwh": 5.12, 
+      "price": 1380,
+      "specs": {
+        "type": "Lithium Iron Phosphate (LiFePO4)",
+        "voltage": "51.2V",
+        "cycles": "6000+ cycles",
+        "warranty": "10 years",
+        "expandable": true
+      },
+      "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=400"
+    },
+    {
+      "name": "LV 5.12kWh", 
+      "kwh": 5.12, 
+      "price": 678,
+      "specs": {
+        "type": "Lithium Iron Phosphate (LiFePO4)",
+        "voltage": "51.2V",
+        "cycles": "5000+ cycles",
+        "warranty": "5 years",
+        "expandable": true
+      },
+      "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=400"
+    },
+    {
+      "name": "LV 10.24kWh", 
+      "kwh": 10.24, 
+      "price": 1208,
+      "specs": {
+        "type": "Lithium Iron Phosphate (LiFePO4)",
+        "voltage": "51.2V",
+        "cycles": "5000+ cycles",
+        "warranty": "5 years",
+        "expandable": true
+      },
+      "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=400"
+    },
+    {
+      "name": "LV 15.36kWh", 
+      "kwh": 15.36, 
+      "price": 1440,
+      "specs": {
+        "type": "Lithium Iron Phosphate (LiFePO4)",
+        "voltage": "51.2V",
+        "cycles": "5000+ cycles",
+        "warranty": "5 years",
+        "expandable": true
+      },
+      "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=400"
+    }
   ],
   "labor": {"flat_under_5kw": 350, "daily_rate": 100},
   "materials": {"flat_under_5kw": 400},
