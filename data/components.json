@@ -73,9 +73,9 @@
   "inverters": {
     "low_cost_preferred": [
       {
-        "name": "LUX 6kW", 
-        "kw": 6, 
-        "price": 516,
+        "name": "Deye 5kW", 
+        "kw": 5, 
+        "price": 520,
         "specs": {
           "type": "Hybrid Inverter",
           "phases": "Single Phase",
@@ -86,13 +86,26 @@
         "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
       },
       {
-        "name": "LV 5kW", 
-        "kw": 5, 
-        "price": 488,
+        "name": "Lux 6kW", 
+        "kw": 6, 
+        "price": 580,
         "specs": {
           "type": "Hybrid Inverter",
           "phases": "Single Phase",
-          "efficiency": "97.3%",
+          "efficiency": "97.8%",
+          "battery_compatible": true,
+          "warranty": "5 years"
+        },
+        "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
+      },
+      {
+        "name": "Deye 8kW", 
+        "kw": 8, 
+        "price": 750,
+        "specs": {
+          "type": "Hybrid Inverter",
+          "phases": "Single Phase",
+          "efficiency": "98.0%",
           "battery_compatible": true,
           "warranty": "5 years"
         },
@@ -101,25 +114,12 @@
     ],
     "high_cost_preferred": [
       {
-        "name": "DeYe EU1p 5kW", 
-        "kw": 5, 
-        "price": 888,
+        "name": "Lux Premium 8kW", 
+        "kw": 8, 
+        "price": 950,
         "specs": {
           "type": "Hybrid Inverter",
           "phases": "Single Phase",
-          "efficiency": "97.8%",
-          "battery_compatible": true,
-          "warranty": "10 years"
-        },
-        "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
-      },
-      {
-        "name": "DeYe 8kW", 
-        "kw": 8, 
-        "price": 1320,
-        "specs": {
-          "type": "Hybrid Inverter",
-          "phases": "Single/Three Phase",
           "efficiency": "98.1%",
           "battery_compatible": true,
           "warranty": "10 years"
@@ -127,28 +127,28 @@
         "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
       },
       {
-        "name": "DeYe 10kW", 
+        "name": "Deye 10kW", 
         "kw": 10, 
-        "price": 1800,
+        "price": 1200,
         "specs": {
           "type": "Hybrid Inverter",
-          "phases": "Three Phase",
-          "efficiency": "98.3%",
+          "phases": "Single/Three Phase",
+          "efficiency": "98.2%",
           "battery_compatible": true,
           "warranty": "10 years"
         },
         "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
       },
       {
-        "name": "LV 10kW", 
-        "kw": 10, 
-        "price": 1116,
+        "name": "Deye 12kW", 
+        "kw": 12, 
+        "price": 1500,
         "specs": {
           "type": "Hybrid Inverter",
           "phases": "Three Phase",
-          "efficiency": "97.9%",
+          "efficiency": "98.3%",
           "battery_compatible": true,
-          "warranty": "5 years"
+          "warranty": "10 years"
         },
         "image": "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=400"
       }
