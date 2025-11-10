@@ -3,24 +3,22 @@
 LANGUAGES = {
     "en": {
         "welcome": """
-☀️ Welcome to SolarKH Bot!
+🌞 Welcome to SolarKH Bot!
 
-I can help you get quotes for solar panel installations.
+Your trusted solar energy partner in Cambodia 🇰🇭
 
-Commands:
-• /quote <monthly_kwh> <price_per_kwh> - Get a custom quote
-  Example: /quote 300 0.15
+What can I help you with today?
 
-• /template <type> <price_per_kwh> - Get quote from template
-  Types: small, medium, big, factory
-  Example: /template medium 0.15
+💰 Get Quote - Calculate solar system cost
+📋 Templates - Quick quotes for common sizes
+🛒 Products - Browse panels, inverters & batteries
+📚 Learn - Solar energy education center
+🌐 Language - Switch to ភាសាខ្មែរ
 
-• /language - Switch language / ប្តូរភាសា
-• /help - Show this help message
+📞 Contact us for professional installation!
+📢 Follow updates: @solar_kh
 
-📢 Follow our channel: @solar_kh
-
-Let's power your future with solar! 🌞
+Let's power your future with clean energy! ☀️
 """,
         "help": """
 📖 **How to Use SolarKH Bot**
@@ -97,24 +95,22 @@ Example: `/template medium 0.15`
     },
     "kh": {
         "welcome": """
- សូមស្វាគមន៍មកកាន់ SolarKH Bot!
+🌞 សូមស្វាគមន៍មកកាន់ SolarKH Bot!
 
-ខ្ញុំអាចជួយអ្នកទទួលបានសម្រង់តម្លៃសម្រាប់ការដំឡើងបន្ទះពន្លឺព្រះអាទិត្យ។
+ដៃគូថាមពលសូឡាដែលអ្នកទុកចិត្តនៅកម្ពុជា 🇰🇭
 
-ពាក្យបញ្ជា:
-• /quote - ទទួលបានសម្រង់តម្លៃផ្ទាល់ខ្លួន
-  ឧទាហរណ៍: /quote 300 0.15
+តើខ្ញុំអាចជួយអ្វីបានសម្រាប់អ្នកថ្ងៃនេះ?
 
-• /template - ទទួលបានសម្រង់តម្លៃពីគំរូ
-  ប្រភេទ: តូច, មធ្យម, ធំ, រោងចក្រ
-  ឧទាហរណ៍: /template មធ្យម 0.15
+💰 សម្រង់តម្លៃ - គណនាតម្លៃប្រព័ន្ធសូឡា
+📋 គំរូ - សម្រង់រហ័សសម្រាប់ទំហំទូទៅ
+🛒 ផលិតផល - រកមើលបន្ទះសូឡា inverter និងថ្ម
+📚 រៀនសូត្រ - មជ្ឈមណ្ឌលអប់រំថាមពលសូឡា
+🌐 ភាសា - ប្តូរទៅ English
 
-• /language - ប្តូរភាសា
-• /help - បង្ហាញសារជំនួយនេះ
+📞 ទាក់ទងមកយើងសម្រាប់ការដំឡើងប្រកបដោយវិជ្ជាជីវៈ!
+📢 តាមដានព័ត៌មាន: @solar_kh
 
- តាមដានឆានែលរបស់យើង: @solar_kh
-
-សូមបំពេញអនាគតរបស់អ្នកដោយថាមពលព្រះអាទិត្យ! 
+សូមបំពេញអនាគតរបស់អ្នកដោយថាមពលស្អាត! ☀️
 """,
         "help": """
 📖 **របៀបប្រើ SolarKH Bot**

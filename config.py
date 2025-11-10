@@ -5,7 +5,9 @@ BOT_TOKEN = "8314060395:AAHzQECuCSAiyfvMp0SaFzdT6Yfy1yGa8Bs"
 CHANNEL = "@solar_kh"
 
 # Branding
-LOGO_URL = "https://raw.githubusercontent.com/chhany007/solarkh_bot_new/main/assets/logo.png"
+# Using a solar energy themed image from Unsplash as placeholder
+# Replace with your actual logo URL after uploading to GitHub or image hosting
+LOGO_URL = "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&h=500&fit=crop"
 COMPANY_NAME = "SolarKH"
 
 # System parameters

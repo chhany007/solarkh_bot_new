@@ -23,11 +23,13 @@ def get_main_keyboard(user_id):
     if lang == 'kh':
         keyboard = [
             [KeyboardButton("💰 សម្រង់តម្លៃ"), KeyboardButton("📋 គំរូ")],
-            [KeyboardButton("🌐 ប្តូរភាសា"), KeyboardButton("❓ ជំនួយ")]
+            [KeyboardButton("🛒 ផលិតផល"), KeyboardButton("📚 រៀនសូត្រ")],
+            [KeyboardButton("🌐 ភាសា"), KeyboardButton("❓ ជំនួយ")]
         ]
     else:
         keyboard = [
             [KeyboardButton("💰 Get Quote"), KeyboardButton("📋 Templates")],
+            [KeyboardButton("🛒 Products"), KeyboardButton("📚 Learn")],
             [KeyboardButton("🌐 Language"), KeyboardButton("❓ Help")]
         ]
     return ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
@@ -244,8 +246,12 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "💰 សម្រង់តម្លៃ": "quote_prompt",
         "📋 Templates": "templates",
         "📋 គំរូ": "templates",
+        "🛒 Products": "products",
+        "🛒 ផលិតផល": "products",
+        "📚 Learn": "learn",
+        "📚 រៀនសូត្រ": "learn",
         "🌐 Language": "language",
-        "🌐 ប្តូរភាសា": "language",
+        "🌐 ភាសា": "language",
         "❓ Help": "help",
         "❓ ជំនួយ": "help"
     }
@@ -263,6 +269,12 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
     elif action == "templates":
         await template(update, context)
+    
+    elif action == "products":
+        await products_command(update, context)
+    
+    elif action == "learn":
+        await learn_command(update, context)
         
     elif action == "language":
         await language_command(update, context)
@@ -512,7 +524,7 @@ def main():
     app.add_handler(CallbackQueryHandler(learn_callback, pattern='^learn_'))
     
     # Add message handlers for buttons and text input
-    app.add_handler(MessageHandler(filters.Regex('^(💰|📋|🌐|❓)'), button_handler))
+    app.add_handler(MessageHandler(filters.Regex('^(💰|📋|🛒|📚|🌐|❓)'), button_handler))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, text_handler))
     
     # Add error handler
