@@ -69,9 +69,15 @@ async def language_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     set_language(user_id, lang)
     
+    # Edit the message to show language changed
     await query.edit_message_text(
         text=get_text(user_id, 'language_changed')
     )
+    
+    # Send new message with updated keyboard
+    keyboard = get_main_keyboard(user_id)
+    welcome_msg = get_text(user_id, 'welcome')
+    await query.message.reply_text(welcome_msg, reply_markup=keyboard)
 
 async def quote(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handle /quote command"""
@@ -80,8 +86,7 @@ async def quote(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         if len(context.args) < 2:
             await update.message.reply_text(
-                get_text(user_id, 'error_params'),
-                parse_mode='Markdown'
+                get_text(user_id, 'error_params')
             )
             return
         
@@ -171,8 +176,7 @@ async def template_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
         if template_type not in template_map:
             await update.message.reply_text(
-                get_text(user_id, 'template_unknown').format(template_type) + format_templates(user_id),
-                parse_mode='Markdown'
+                get_text(user_id, 'template_unknown').format(template_type) + format_templates(user_id)
             )
             return
         
@@ -196,14 +200,13 @@ async def template_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         q = calculate_quote(monthly_kwh, price_per_kwh)
         
         # Send formatted quote
-        await update.message.reply_text(format_quote(q, user_id), parse_mode='Markdown')
+        await update.message.reply_text(format_quote(q, user_id))
         
         logger.info(f"Template quote '{template_type}' for user {user_id}")
         
     except ValueError:
         await update.message.reply_text(
-            get_text(user_id, 'template_error'),
-            parse_mode='Markdown'
+            get_text(user_id, 'template_error')
         )
     except Exception as e:
         logger.error(f"Error in template command: {e}")
